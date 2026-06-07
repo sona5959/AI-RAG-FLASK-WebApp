@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RAG APPLICATION</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"
+</head>
+<body>
+  <h2 class="main-heading">Upload Your PDF and ask me Questions !!!!</h2>
+
+  <div class="container">
+
+  <form method="POST" action="/upload" enctype="multipart/form-data" id="rag-form">
+    <label for="pdf_file">Your AI Assistant</label>
+    <input type="file" name="pdf_file" id="pdf_file" accept="pdf" required>
+      <br/>
+
+      <input type="text" name="query" id="ask-query" required placeholder="Enter your query here regarding your PDF">
+      <br/>
+      <button type="submit">Ask &#128522;</button>
+
+  </form>
+      <p id="processing" style="display: none;">Processing....</p>
+  <p id="answer"></p>
+
+      <form action="/clean">
+          <br/>
+    <button type="submit" id="clean-rag" style="display: none">Finish-asking</button>
+</form>
+  </div>
+
+
+<script src="{{ url_for('static', filename='script.js') }}">
+
+</script>
+
+
+
+</body>
+</html>

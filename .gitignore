@@ -1,0 +1,7 @@
+.env
+.venv/
+data/
+.DS_Store
+.DS_Store?
+.idea/
+__pycache__/
